@@ -1,0 +1,62 @@
+.theme-switcher {
+    &--xs {
+        display: none;
+
+        @media screen and (max-width: $break-sm) {
+            display: block;
+        }
+    }
+
+    &--gt-xs {
+        position: fixed;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 225px;
+        padding: 1rem;
+        background-color: var(--secondary-bg);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 0.5rem 0 0 0.5rem;
+
+        @media screen and (max-width: $break-sm) {
+            display: none;
+        }
+    }
+
+    &__label {
+        font-size: 0.75rem;
+        font-weight: 500;
+        text-align: center;
+        padding: 0.25rem;
+        cursor: pointer;
+        color: var(--secondary-text);
+        position: relative;
+
+        &.active, &:hover {
+            color: var(--primary-text);
+            transition: $transition-base;
+        }
+
+        &.active {
+            &::after {
+                content: '';
+                height: 6px;
+                width: 6px;
+                border-radius: 10px;
+                background-color: var(--primary);
+                position: absolute;
+                top: 50%;
+                left: -10px;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    &__btn {
+        font-size: 1.125rem;
+        color: var(--primary-text);
+        cursor: pointer;
+    }
+}

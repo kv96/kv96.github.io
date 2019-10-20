@@ -1,0 +1,13 @@
+:root {
+    @each $color, $value in $light-theme-colors {
+        $theme-color: --#{$color};
+        #{$theme-color}: #{$value};
+    }
+}
+
+[data-theme=dark] {
+    @each $color, $value in $dark-theme-colors {
+        $theme-color: --#{$color};
+        #{$theme-color}: #{$value};
+    }
+}
