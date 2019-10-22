@@ -1,0 +1,61 @@
+//
+// Color system
+//
+
+// Colors
+$white:#ffffff;
+$black:#000000;
+
+// Light Theme Colors
+$light-theme-primary-color:#0368f4;
+$light-theme-primary-bg:#ffffff;
+$light-theme-secondary-bg:#f6f6f6;
+$light-theme-primary-text:#000000;
+$light-theme-secondary-text:#666666;
+$light-theme-tertiary-text:#333333;
+$light-theme-shot-hover-bg: rgba($light-theme-primary-color, 0.85);
+
+$light-theme-colors:(
+    "primary":         $light-theme-primary-color,
+    "primary-bg":      $light-theme-primary-bg,
+    "secondary-bg":    $light-theme-secondary-bg,
+    "primary-text":    $light-theme-primary-text,
+    "secondary-text":  $light-theme-secondary-text,
+    "tertiary-text":   $light-theme-tertiary-text,
+    "shot-hover-bg":   $light-theme-shot-hover-bg 
+    );
+
+// Dark Theme Colors
+$dark-theme-primary-color:#0AD7A7;
+$dark-theme-primary-bg:#000000;
+$dark-theme-secondary-bg:#222222;
+$dark-theme-primary-text:#ffffff;
+$dark-theme-secondary-text:#868686;
+$dark-theme-tertiary-text:#C9C9C9;
+$dark-theme-shot-hover-bg: rgba($dark-theme-primary-color, 0.85);
+
+$dark-theme-colors:(
+    "primary":         $dark-theme-primary-color,
+    "primary-bg":      $dark-theme-primary-bg,
+    "secondary-bg":    $dark-theme-secondary-bg,
+    "primary-text":    $dark-theme-primary-text,
+    "secondary-text":  $dark-theme-secondary-text,
+    "tertiary-text":   $dark-theme-tertiary-text,
+    "shot-hover-bg":   $dark-theme-shot-hover-bg 
+);
+
+
+//
+// Fonts
+//
+$font-family:'Poppins', sans-serif;
+
+//
+// Break Points
+//
+$break-sm:576px;
+
+//
+// Transitions
+//
+$transition-base: all 250ms ease-in-out;
