@@ -93,3 +93,6 @@ $.ajax({
     }
 });
 
+////// COPYRIGHT YEAR ///////
+var currentYear = new Date().getFullYear();
+$('#copyrightYear').text(currentYear);
