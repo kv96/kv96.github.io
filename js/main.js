@@ -68,12 +68,12 @@ $('.theme-switcher__btn').click(function () {
 
 
 ////// DRIBBBLE ///////
-// Set the Access Token
-var accessToken = "2d96d6d6600a9161ccb7991e27df3bd04002432cb9e34244ace4480cba6574b5"
+var accessToken = "2d96d6d6600a9161ccb7991e27df3bd04002432cb9e34244ace4480cba6574b5" // Set the Access Token
+var fetchLimit = 9 //Fetch only latest 9 shots
 
 // Call Dribble v2 API
 $.ajax({
-    url: 'https://api.dribbble.com/v2/user/shots?access_token=' + accessToken,
+    url: 'https://api.dribbble.com/v2/user/shots?access_token=' + accessToken + '&per_page=' + fetchLimit,
     dataType: 'json',
     type: 'GET',
     success: function (data) {
