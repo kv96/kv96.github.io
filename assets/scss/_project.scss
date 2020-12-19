@@ -1,6 +1,10 @@
 .project {
-  margin-top: 1.5rem;  
   background-color: var(--secondary-bg);
+  margin-top: 1.5rem;  
+
+  &:last-child{
+    margin-bottom: 4rem;
+  }
 
   .row {
     margin-left: 0;

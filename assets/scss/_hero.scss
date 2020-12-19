@@ -8,13 +8,13 @@
     }
 
     &__lead {
-        color: var(--secondary-text);
+        color: var(--tertiary-text);
         font-size: 1.5rem;
         line-height: 1.75;
         max-width: 800px;
 
         &--name {
-            color: var(--tertiary-text);
+            color: var(--secondary-text);
             border-bottom: 3px solid var(--primary);
         }
     }
