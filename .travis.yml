@@ -1,10 +1,10 @@
 script:
- - "test/sass-compile-check.sh"
+ - "build/sass-compile-check.sh"
 
 language: sass
 before_install:
  - gem install sass
- - chmod +x test/sass-compile-check.sh
+ - chmod +x build/sass-compile-check.sh
 
 deploy:
   provider: pages
