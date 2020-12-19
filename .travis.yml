@@ -6,6 +6,10 @@ before_install:
  - gem install sass
  - chmod +x build/sass-compile-check.sh
 
+branches:
+  only:
+  - master
+
 deploy:
   provider: pages
   skip_cleanup: true
