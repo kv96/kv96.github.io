@@ -7,8 +7,8 @@
 run_it()
 {
 	
-	local _src="${1-scss/style.scss}"
-	local _dest="${2-css/style.css}"
+	local _src="${1-assets/scss/style.scss}"
+	local _dest="${2-assets/css/style.css}"
 	local _options="${3---style=compressed}"
 
 	# ----------------------------------------------------------------------------
