@@ -1,21 +1,21 @@
 .hero {
-    @media screen and (min-width: $break-sm) {
-        height: 350px;
-    }
+  @include media-breakpoint-up(sm) {
+    height: 350px;
+  }
 
-    &__jumbotron {
-        font-size: 3.125rem;
-    }
+  &__jumbotron {
+    font-size: 3.125rem;
+  }
 
-    &__lead {
-        color: var(--tertiary-text);
-        font-size: 1.5rem;
-        line-height: 1.75;
-        max-width: 800px;
+  &__lead {
+    color: var(--tertiary-text);
+    font-size: 1.5rem;
+    line-height: 1.75;
+    max-width: 800px;
 
-        &--name {
-            color: var(--secondary-text);
-            border-bottom: 3px solid var(--primary);
-        }
+    &--name {
+      color: var(--secondary-text);
+      border-bottom: 3px solid var(--primary);
     }
+  }
 }

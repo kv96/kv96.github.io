@@ -1,12 +1,27 @@
 body {
-    font-family: $font-family;
-    scroll-behavior: smooth;
-    background-color: var(--primary-bg);
-    color: var(--primary-text);
+  font-family: $font-family;
+  scroll-behavior: smooth;
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+  overflow-x: hidden;
+}
+
+.layout{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
 }
 
 // Selection
 ::selection {
-    color: $white;
-    background: var(--primary);
+  color: $white;
+  background: var(--primary);
 }

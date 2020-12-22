@@ -30,6 +30,12 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-menu {
+    &:before {
+      content: unicode($icon-menu); 
+    }
+}
+
 .icon-dark {
     &:before {
         content: unicode($icon-dark);

@@ -23,7 +23,7 @@
         transition: transform cubic-bezier(0.31, 0.48, 0.53, 0.83) 0.3s;
         overflow: hidden;
 
-        @media screen and (max-width: $break-sm) {
+        @include media-breakpoint-down(sm) {
             flex-basis: 100%;
             max-width: 100%;
             margin: 20px;
