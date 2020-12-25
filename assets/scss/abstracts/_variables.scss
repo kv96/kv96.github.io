@@ -11,8 +11,8 @@ $light-theme-primary-color:#0368f4;
 $light-theme-primary-bg:#ffffff;
 $light-theme-secondary-bg:#f6f6f6;
 $light-theme-primary-text:#000000;
-$light-theme-secondary-text:#666666;
-$light-theme-tertiary-text:#333333;
+$light-theme-secondary-text:#333333;
+$light-theme-tertiary-text:#666666;
 $light-theme-shot-hover-bg: rgba($light-theme-primary-color, 0.85);
 
 $light-theme-colors:(
@@ -30,8 +30,8 @@ $dark-theme-primary-color:#0AD7A7;
 $dark-theme-primary-bg:#000000;
 $dark-theme-secondary-bg:#222222;
 $dark-theme-primary-text:#ffffff;
-$dark-theme-secondary-text:#898989;
-$dark-theme-tertiary-text:#C9C9C9;
+$dark-theme-secondary-text:#C9C9C9;
+$dark-theme-tertiary-text:#898989;
 $dark-theme-shot-hover-bg: rgba($dark-theme-primary-color, 0.85);
 
 $dark-theme-colors:(
@@ -53,9 +53,37 @@ $font-family:'Poppins', sans-serif;
 //
 // Break Points
 //
-$break-sm:576px;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+) !default;
 
 //
 // Transitions
 //
 $transition-base: all 250ms ease-in-out;
+
+//
+// Icon Fonts
+//
+$icomoon-font-family: "portfolioicons" !default;
+$icomoon-font-path: "../fonts" !default;
+
+// Icon Unicodes
+// Note: "/" is removed and will be added during scss compilation. Fix reason is provided in "abstracts/_functions.scss".
+$icon-menu: "e901";
+$icon-dark: "e900";
+$icon-sun: "e9d4";
+$icon-google: "ea88";
+$icon-facebook: "ea90";
+$icon-instagram: "ea92";
+$icon-twitter: "ea96";
+$icon-dribbble: "eaa7";
+$icon-behance: "eaa8";
+$icon-github: "eab0";
+$icon-linkedin: "eaca";
+$icon-codepen: "eae8";

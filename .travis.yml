@@ -1,10 +1,10 @@
 script:
- - "build/sass-compile-check.sh"
+ - "build/compile-scss.sh"
 
-language: sass
+language: ruby
 before_install:
  - gem install sass
- - chmod +x build/sass-compile-check.sh
+ - chmod +x build/compile-scss.sh
 
 branches:
   only:

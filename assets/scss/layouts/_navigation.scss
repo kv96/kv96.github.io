@@ -1,0 +1,40 @@
+.site-navbar {
+  height: 80px;
+
+  .logo {
+    height: 40px;
+    width: 40px;
+    fill: var(--primary-text);
+  }
+
+  .navbar-toggler-icon {
+    color: var(--primary-text);
+    font-size: 1.25em;
+  }
+  .navbar-collapse {
+    @include media-breakpoint-down(sm) {
+      background-color: var(--secondary-bg);
+      margin: 1rem -1rem;
+    }
+    .navbar-nav {
+      @include media-breakpoint-down(sm) {
+        padding: 1rem;
+      }
+      .nav-item {
+        .nav-link {
+          color: var(--tertiary-text);
+        }
+        &:hover {
+          .nav-link {
+            color: var(--primary-text);
+          }
+        }
+        &.active {
+          .nav-link {
+            color: var(--primary);
+          }
+        }
+      }
+    }
+  }
+}
