@@ -1,0 +1,22 @@
+{
+  "name": "karthikvenkaraman.in",
+  "version": "1.0.0",
+  "description": "Personal portfolio website of Karthik Venkataraman",
+  "main": "index.js",
+  "scripts": {
+    "install": "npm i -D sass postcss postcss-cli autoprefixer",
+    "build": "npm run compile-scss && npm run prefix-overwrite-css",
+    "compile-scss": "sass assets/scss/style.scss assets/css/style.css --style=compressed",
+    "prefix-css": "npx postcss assets/css/style.css --use autoprefixer -o assets/css/style-prefixed.css -m",
+    "prefix-overwrite-css": "npx postcss assets/css/style.css --use autoprefixer -r -m",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Karthik Venkataraman",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.1.0",
+    "postcss": "^8.2.1",
+    "postcss-cli": "^8.3.1",
+    "sass": "^1.30.0"
+  }
+}
