@@ -1,13 +1,16 @@
-@import "variables";
-@import "mixins";
-@import "root";
-@import "icons";
-@import "layout";
-@import "navbar";
-@import "sections";
-@import "hero";
-@import "footer";
-@import "theme-switcher";
-@import "project";
-@import "dribbble-shots";
-@import "spinner";
+@charset "UTF-8";
+
+//Abstracts
+@import "abstracts/__abstracts-dir";
+
+//Base Styles
+@import "base/__base-dir";
+
+//Components
+@import "components/__components-dir";
+
+//Layouts
+@import "layouts/__layouts-dir";
+
+//Pages
+@import "pages/__pages-dir";

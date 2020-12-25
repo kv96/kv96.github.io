@@ -66,3 +66,24 @@ $grid-breakpoints: (
 // Transitions
 //
 $transition-base: all 250ms ease-in-out;
+
+//
+// Icon Fonts
+//
+$icomoon-font-family: "portfolioicons" !default;
+$icomoon-font-path: "../fonts" !default;
+
+// Icon Unicodes
+// Note: "/" is removed and will be added during scss compilation. Fix reason is provided in "abstracts/_functions.scss".
+$icon-menu: "e901";
+$icon-dark: "e900";
+$icon-sun: "e9d4";
+$icon-google: "ea88";
+$icon-facebook: "ea90";
+$icon-instagram: "ea92";
+$icon-twitter: "ea96";
+$icon-dribbble: "eaa7";
+$icon-behance: "eaa8";
+$icon-github: "eab0";
+$icon-linkedin: "eaca";
+$icon-codepen: "eae8";

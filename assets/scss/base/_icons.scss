@@ -1,11 +1,3 @@
-@charset "UTF-8";
-
-// Note: Fix added to prevent scss from converting unicode characters to random glyphs during scss compilation.
-// Stack overflow Issue: https://stackoverflow.com/questions/30421570/sass-unicode-escape-is-not-preserved-in-css-file
-@function unicode($str) {
-    @return unquote('"') + unquote(str-insert($str, "\\", 1)) + unquote('"');
-}
-
 @font-face {
     font-family: "#{$icomoon-font-family}";
     src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.eot");
