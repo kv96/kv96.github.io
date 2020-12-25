@@ -64,35 +64,6 @@ $('.theme-switcher__btn').click(function () {
     }
 });
 
-
-
-
-////// DRIBBBLE ///////
-var accessToken = "2d96d6d6600a9161ccb7991e27df3bd04002432cb9e34244ace4480cba6574b5" // Set the Access Token
-var fetchLimit = 9 //Fetch only latest 9 shots
-
-// Call Dribble v2 API
-$.ajax({
-    url: 'https://api.dribbble.com/v2/user/shots?access_token=' + accessToken + '&per_page=' + fetchLimit,
-    dataType: 'json',
-    type: 'GET',
-    success: function (data) {
-        if (data.length > 0) {
-            $.each(data.reverse(), function (i, val) {
-                $('#dribbbleShots').prepend(
-                    '<a class="shot" target="_blank" href="' + val.html_url + '" title="' + val.title + '" rel="noopener"><div class="title">' + val.title + '</div><img src="' + val.images.normal + '" loading="lazy" alt="' + val.title + '"/></a>'
-                )
-            })
-        }
-        else {
-            $('#dribbbleShots').append('<p>Sorry, No shots yet</p>');
-        }
-    },
-    complete: function () {
-        $('#dribbbleLoader').hide();
-    }
-});
-
 ////// COPYRIGHT YEAR ///////
 var currentYear = new Date().getFullYear();
 $('#copyrightYear').text(currentYear);
