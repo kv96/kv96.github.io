@@ -1,10 +1,11 @@
-script:
- - "build/compile-scss.sh"
+language: node_js
 
-language: ruby
-before_install:
- - gem install sass
- - chmod +x build/compile-scss.sh
+node_js:
+ - lts/* 
+ - node
+
+script:
+ - "npm run build"
 
 branches:
   only:
