@@ -1,8 +1,12 @@
-.about-content {
-  line-height: 1.75;
-  &__signature {
-    fill: var(--primary);
-    width: 350px;
-    margin-left: -0.5rem;
+.about {
+  &__content {
+    * {
+      line-height: 1.75;
+    }
+    &__signature {
+      fill: var(--primary);
+      width: 350px;
+      margin-left: -0.5rem;
+    }
   }
 }
