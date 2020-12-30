@@ -1,14 +1,14 @@
-.text{
-    // &--theme-primary{
-    //     color: var(--primary);
-    // }
-    &--primary{
-        color: var(--primary-text);
-    }
-    &--secondary{
-        color: var(--secondary-text);
-    }
-    &--tertiary{
-        color: var(--tertiary-text);
-    }
+.text {
+  // &--theme-primary{
+  //     color: var(--primary);
+  // }
+  &--primary {
+    color: var(--primary-text);
+  }
+  &--secondary {
+    color: var(--secondary-text);
+  }
+  &--tertiary {
+    color: var(--tertiary-text);
+  }
 }
