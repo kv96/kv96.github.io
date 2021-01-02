@@ -1,4 +1,7 @@
 .bg {
+  &--theme--primary{
+    background-color: var(--primary);
+  }
   &--primary {
     background-color: var(--primary-bg);
   }
