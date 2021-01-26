@@ -22,6 +22,16 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-arrow-back {
+    &:before {
+        content: unicode($icon-arrow-back); 
+    }
+}
+.icon-arrow-forward {
+    &:before {
+        content: unicode($icon-arrow-forward); 
+    }
+}
 .icon-menu {
     &:before {
       content: unicode($icon-menu); 
