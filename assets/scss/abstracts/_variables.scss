@@ -72,7 +72,10 @@ $aspect-ratios: (
 //
 // Transitions
 //
-$transition-base: all 250ms ease-in-out;
+$transition-property: all !default;
+$transition-duration: 250ms !default;
+$transition-timing-function: ease-in-out !default;
+$transition-base: #{$transition-property} #{$transition-duration} #{$transition-timing-function};
 
 //
 // Icon Fonts
@@ -82,6 +85,8 @@ $icomoon-font-path: "../fonts" !default;
 
 // Icon Unicodes
 // Note: "/" is removed and will be added during scss compilation. Fix reason is provided in "abstracts/_functions.scss".
+$icon-arrow-back: "e904";
+$icon-arrow-forward: "e905";
 $icon-menu: "e901";
 $icon-dark: "e900";
 $icon-sun: "e9d4";

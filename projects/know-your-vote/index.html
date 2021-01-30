@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Learn how we built a website for the 2019 Indian General Election to help the citizens know the essential information regarding the election and the candidates contesting.">
+    <meta name="theme-color" content="#f6f6f6">
+
+    <meta property="og:title" content="Know Your Vote - Election Information Portal | Karthik Venkataraman">
+    <meta property="og:description" content="Learn how we built a website for the 2019 Indian General Election to help the citizens know the essential information regarding the election and the candidates contesting.">
+    <meta property="og:image" content="https://www.karthikvenkataraman.in/assets/images/projects/know-your-vote-banner.jpg">
+    <meta property="og:url" content="https://www.karthikvenkataraman.in/projects/know-your-vote">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <title>Know Your Vote - Election Information Portal | Karthik Venkataraman</title>
+    <link rel="icon" href="/assets/images/favicon.png" type="image/png">
+
+    <!-- Preloads -->
+    <link rel="preload" href="/assets/fonts/portfolioicons.woff" as="font" type="font/woff" crossorigin> 
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="layout" role="document">
+        <header>
+            <nav class="navbar navbar-expand-lg site-navbar pt-4">
+                <div class="container">
+                    <a class="navbar-brand" href="/">
+                        <span class="sr-only">Go to Home Page</span>
+                        <div class="d-flex justify-content-center align-items-center" data-tilt data-tilt-scale="1.25" data-tilt-speed="300" data-tilt-transition="true">
+                            <svg class="logo" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+                                <path fill-rule="evenodd" d="M38 0a2 2 0 0 1 2 2v36a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h36zm-1.825 13h-9.32c-.25 0-.476.058-.677.175-.5.284-.827.76-.977 1.428l-1.153 13.03c-.017.267.125.36.426.276.134-.033.31-.125.526-.276s.426-.355.626-.614.31-.49.326-.69l1.002-11.4h4.06l-1.128 12.704c-.017.267.125.36.426.276.134-.033.31-.125.526-.276s.426-.36.626-.626.31-.493.326-.677l1.002-11.4h1.98c.184 0 .464-.134.84-.4s.63-.6.764-1.027c.117-.334.05-.5-.2-.5zm-16.162 0h-8.82c-.25 0-.476.058-.677.175-.5.284-.827.76-.977 1.428l-.326 3.834c-1.253.234-2.326.677-3.22 1.328s-1.52 1.34-1.88 2.067-.53 1.424-.514 2.092c.067 2.673 1.996 4.01 5.788 4.01 1.12 0 2.113-.276 2.982-.827 1.704-1.102 2.714-2.8 3.032-5.06l.226-1.78c1.77.25 3.003.714 3.696 1.39s.898 1.49.614 2.443-.54 1.487-.764 1.604-.497.192-.814.226c-.785.084-1.695-.092-2.73-.526l-.053-.02c-.13-.036-.31.01-.536.133a2.68 2.68 0 0 0-.727.601c-.226.26-.372.5-.438.727s-.033.363.1.413c1.203.518 2.238.727 3.107.626.518-.067 1.107-.28 1.766-.64s1.25-.923 1.766-1.69.902-1.57 1.153-2.405c.434-1.47.17-2.606-.79-3.408s-2.66-1.303-5.1-1.503l.326-3.307H18.6c.184 0 .464-.134.84-.4s.63-.6.764-1.027c.117-.334.05-.5-.2-.5zM8.688 20.28c1.403-.242 3.14-.305 5.212-.188l-.752 4.6-.05.137c-.11.305-.204.502-.277.59-.334.4-1.01.6-2.03.6-3.458 0-5.212-1.16-5.262-3.483l-.005-.165c-.008-.64.12-1.053.38-1.238.45-.334 1.378-.622 2.78-.864zm5.713-5.35l-.276 3.207c-1.153-.017-2.188.008-3.107.075l.276-3.282z" />
+                            </svg>
+                        </div>
+                    </a>
+                    
+                    <!-- Theme Switcher for XS Devices -->
+                    <div class="ml-auto mr-3 mt-2 theme-switcher theme-switcher--xs">
+                        <span class="icon-sun theme-switcher__btn" data-theme-option="light"></span>
+                        <span class="icon-dark theme-switcher__btn" data-theme-option="dark"></span>
+                    </div>
+                    
+                    <!-- Site Navigation Toggler -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#siteNavigation" aria-controls="siteNavigation" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon icon-menu d-flex justify-content-center align-items-center"></span>
+                    </button>
+                    
+                    <!-- Site Navigation -->
+                    <div class="collapse navbar-collapse" id="siteNavigation">
+                        <ul class="navbar-nav ml-sm-auto">
+                            <li class="nav-item">
+                                <a class="nav-link px-lg-3" href="/">Home</a>
+                            </li>
+                            <!-- <li class="nav-item active">
+                                <a class="nav-link px-lg-3" href=".">Projects<span class="sr-only">(current)</span></a>
+                            </li> -->
+                            <li class="nav-item">
+                                <a class="nav-link px-lg-3" href="/about/">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-lg-3" href="/assets/pdf/Karthik-Venkatarman-Resume.pdf" target="_blank">Resume</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="main" tabindex="-1">
+         <article class="project">
+            <div class="project__content my-3 my-sm-5 py-5">
+                <section class="container">
+                    <h1>Know Your Vote - Election Information Portal</h1>   
+                    <p class="h5 text--tertiary">Learn how we built a website for the 2019 Indian General Election to help the citizens know the essential information regarding the election and the candidates contesting.</p>
+                    <figure class="figure mt-4 mb-5">
+                        <img data-src="/assets/images/projects/know-your-vote/know-your-vote-banner.jpg" class="lazyload figure-img img-fluid rounded" alt="Mockup image of Know Your Vote site screens" width="1110" height="833">
+                        <!-- <figcaption class="figure-caption text--tertiary text-center">Landing page of UXwiki</figcaption> -->
+                    </figure>
+                </section>
+                <section class="bg--secondary mb-5">
+                    <div class="container py-3">
+                        <h2 class="mt-2 mb-4">Summary</h2>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h3 class="h4">Overview</h3>
+                                <p class="mt-2 text--secondary">Elections are the heart to the democracy. Citizens get a chance to vote and elect representatives who can make political decisions for them and the country's welfare.</p>
+                                <p class="mt-2 text--secondary">There are various factors influencing the voters' decision making skills like the rise in social networks’ dominance, promotional campaigns with fabricated information or lack of information available about candidates contesting in it.</p>
+                                <p class="mt-2 text--secondary">We took this oppurtinity to conduct an experiment by developing a website to provide essential information regarding the Indian General Election conducted in 2019 and candidate's participating, to see if it can address and resolve the existing problems.</p>
+                                
+                                <h3 class="h4">Project Duration</h3>
+                                <p class="mt-2 text--secondary">7th April 2019 - 16th April 2019</p>
+
+                                <h3 class="h4">Status</h3>
+                                <div class="mt-2 mb-4">
+                                    <span class="badge badge-success">Completed</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <h3 class="h4">Team</h3>
+                                <ul class="list-unstyled text--secondary mb-4">
+                                    <li>Hariprasad KC</li>
+                                    <li>Karthik Venkataraman M</li>
+                                </ul>
+
+                                <h3 class="h4">Roles</h3>
+                                <ul class="list-unstyled text--secondary mb-4">
+                                    <li>UI/UX Design</li>
+                                    <li>Branding</li>
+                                    <li>Front End Development</li>
+                                </ul>
+                                
+                                <h3 class="h4">Tools</h3>
+                                <ul class="list-unstyled text--secondary mb-4">
+                                    <li>Sketch (Design & Prototyping)</li>
+                                    <li>Adobe Illustrator (Branding)</li>
+                                    <li>Visual Studio Code (Development)</li>
+                                </ul>
+                                
+                                <h3 class="h4">Technologies</h3>
+                                <ul class="list-unstyled text--secondary mb-4">
+                                    <li>HTML/SCSS/JS</li>
+                                    <li>Bootstrap (Front-End Framework)</li>
+                                    <li>Golang (Back-End)</li>
+                                    <li>Github (Version Control & Code Management)</li>
+                                    <li>Google Cloud Platform (Deployment)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="container">
+                    <p>Democracy is a system of government in which power is vested in the people and exercised by them directly or through freely elected representatives. The term is derived from the Greek ‘demokratia,’ which was coined in the 5th century BCE to denote the political systems of some Greek city-states, notably Athens.</p>
+                    <p>Democracies fall into two basic categories, direct and representative. In a direct democracy, citizens, without the intermediary of elected or appointed officials, can participate in making public decisions. Such a system is clearly most practical with relatively small numbers of people - in a community organization, tribal council, or the local unit of a labor union, for example - where members can meet in a single room to discuss issues and arrive at decisions by consensus or majority vote. However, today, as in the past, the most common form of democracy, whether for a town of 50,000 or a nation of 50 million, is a representative democracy. Citizens elect officials to make political decisions, formulate laws, and administer programs for the public good.</p>
+                    
+                    <h2>Challenges Faced During Elections</h2>
+                    <p>Voting in an election is a fundamental process in a democratic system. It is a chance for a country’s citizens to have a say in the people who represent them or an issue that impacts them and makes political decisions by majority rule.</p>
+                    <p>With the rise in social networks’ dominance, today’s election scene and the voter’s knowledge are heavily influenced by the biased inputs available and consumed in the form of news, videos, and memes, which are fabricated and promoted, leading to citizens exposed to misinformation.</p>
+                    <p>Another common issue faced during elections is that major parties with needed funds and resources can reach the people with elaborate campaigns through all mediums. Still, small parties and independent aspirants fall short of such privileges and fail to reach them. Thus making the citizens unaware of such contestants.</p>
+
+                    <h2>Our Experiment to Address the Problems</h2>
+                    <p>To resolve the mentioned problems, we decided to create a website for <strong>2019 Indian General Election</strong> that showcases all the relevant details about the candidates participating in the election and experiment with it to know how far it can reach to help the citizens.</p>
+                    <p>The election dates were nearing, and we had less than two weeks to design, develop and make the website live, so we decided to concentrate on showcasing the details for Chennai city alone.</p>
+                    
+                    <h2>Administrative Divisions of Chennai</h2>
+                    <p><a class="link" href="https://en.wikipedia.org/wiki/Chennai" target="_blank" rel="noopener noreferrer">Chennai</a>, formerly known as Madras, is the capital of the Indian state of Tamil Nadu. Located on the Coromandel Coast of the Bay of Bengal, it is one of south India’s largest cultural, economic, and educational centers.</p>
+                    <p>As Tamil Nadu’s capital, Chennai houses the state executive and legislative headquarters primarily in the Secretariat Buildings in the <a class="link" href="https://en.wikipedia.org/wiki/Fort_St._George,_India" target="_blank" rel="noopener noreferrer">Fort St. George</a> campus. Chennai has three <a class="link" href="https://en.wikipedia.org/wiki/Parliament_of_India" target="_blank" rel="noopener noreferrer">parliamentary</a> constituencies — <a class="link" href="https://en.wikipedia.org/wiki/Chennai_North_(Lok_Sabha_constituency)" target="_blank" rel="noopener noreferrer">Chennai North</a>, <a class="link" href=https://en.wikipedia.org/wiki/Chennai_Central_(Lok_Sabha_constituency)" target="_blank" rel="noopener noreferrer">Chennai Central</a>, and <a class="link" href="https://en.wikipedia.org/wiki/Chennai_South_(Lok_Sabha_constituency)" target="_blank" rel="noopener noreferrer">Chennai South</a> — and elects 24 Members of the Legislative Assembly (<a class="link" href="https://en.wikipedia.org/wiki/Member_of_the_Legislative_Assembly_(India)" target="_blank" rel="noopener noreferrer">MLAs</a>) to the state legislature.</p>
+
+                    <h2>Building Know Your Vote!</h2>
+
+                    <p class="text--tertiary text-uppercase mt-5 mb-0">Data Collection</p>
+                    <h3>Gathering Candidate Information</h3>
+                    <p>Gathering the data of each candidate was a challenging task. We couldn’t scrap the needed details from their Wikipedia page or articles on the web because we have to provide legit information to the people. Data sourced from the internet must be fact-checked to avoid any discrepancies, and it might consume more time. To make the situation worse, we found some candidates didn’t have any digital footprint that forced us to find some other reliable source.</p>
+                    <p>We finally decided to obtain the candidate’s information from the affidavit filed with the government for contesting in the election. We were able to get the following information from it:</p>
+                    <ul class="my-4">
+                        <li>Personal Information</li>
+                        <li>Party Information</li>
+                        <li>Financial Information</li>
+                        <li>Criminal Records</li>
+                    </ul>
+
+                    <p class="text--tertiary text-uppercase mt-5 mb-0">User Flow</p>
+                    <h3>Journey of a Site Visitor</h3>
+                    <p>The website has a simple user flow. A site visitor selects the constituency they belong to or enters their Pincode if he doesn’t know it. Based on the selection/input, they are navigated to the respective constituency page with the list of candidates contesting. The visitor then chooses the candidates to know their details.</p>
+                    <figure class="figure my-4">
+                        <img data-src="/assets/images/projects/know-your-vote/know-your-vote-site-user-flow.png" class="lazyload figure-img img-fluid rounded" alt="Flowchart showing the user joruney in Know Your Vote site" width="1110" height="704">
+                        <figcaption class="figure-caption text--tertiary text-center">Know Your Vote site's user flow</figcaption>
+                    </figure>
+
+                    <p class="text--tertiary text-uppercase mt-5 mb-0">Design</p>
+                    <h3>Shaping the User Interface</h3>
+                    <p>The primary goal was to keep the site’s user interface minimalistic and accessible since the target audience was voters who might have visual impairments like color blindness or low vision. A heavy sans-serif font like Lato was used, and proper colors were chosen for better contrast ratios.</p>
+                    <figure class="figure my-4">
+                        <img data-src="/assets/images/projects/know-your-vote/know-your-vote-style-guide.png" class="lazyload figure-img img-fluid rounded" alt="Image showing the typography and color system of Know Your Vote site" width="1110" height="694">
+                        <figcaption class="figure-caption text--tertiary text-center">Style guide of Know Your Vote Site</figcaption>
+                    </figure>
+                    <p>The site’s information architecture (IA) was structured in a way that a visitor can get all the needed information about the constituency and the candidate for better understanding. Cards and tables were used as primary UI components to display the data. The prototypes were designed using Sketch, and branding assets were designed using Adobe Illustrator.</p>
+                    <figure class="figure my-4">
+                        <img data-src="/assets/images/projects/know-your-vote/know-your-vote-information-architecture.png" class="lazyload figure-img img-fluid rounded" alt="Flowchart showing the information architecture of Know Your Vote site" width="1110" height="850">
+                        <figcaption class="figure-caption text--tertiary text-center">Information Architecture of Know Your Vote site</figcaption>
+                    </figure>
+
+                    <figure class="figure my-4">
+                        <img data-src="/assets/images/projects/know-your-vote/know-your-vote-logo-breakdown.png" class="lazyload figure-img img-fluid rounded" alt="Image depicting the breakdown of Know Your Vote site's Logo" width="1110" height="850">
+                        <figcaption class="figure-caption text--tertiary text-center">Breakdown of Know Your Vote site logo</figcaption>
+                    </figure>
+
+                    <p class="text--tertiary text-uppercase mt-5 mb-0">Development</p>
+                    <h3>Coding the Website</h3>
+                    <p>We used a tech stack that was easy and quick to implement. I worked on the front end development, and Hariprasad worked on the back end. The basic development work was completed within 3 days, and we had thorough testing by checking the usability and performing cross-browser testing on multiple devices and platforms.</p>
+                    <p>The front end was built with <a class="link" href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">Bootstrap</a>, and custom styles were written using SCSS. <a class="link" href="https://jquery.com/" target="_blank" rel="noopener noreferrer">JQuery</a> was used to perform DOM manipulations, event handling, and make AJAX calls to fetch candidate and constituency details. <a class="link" href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener noreferrer">WCAG guidelines</a> were followed to achieve the AA level of Conformance, and valid <a class="link" href="https://www.w3.org/WAI/standards-guidelines/aria/" target="_blank" rel="noopener noreferrer">WAI-ARIA</a> attributes were added to the HTML elements to help users access the website via assistive technologies like Screenreaders. Chrome Lighthouse audit was performed to double-check, and suggested fixes were implemented.</p>
+                    <p><a class="link" href="https://golang.org/" target="_blank" rel="noopener noreferrer">Golang</a> was used for the backend that powered the APIs and to handle navigational routing. All the raw data about the candidates and constituencies were stored in JSON format and processed during GET requests. The source code was maintained in Github, and the website was hosted in <a class="link" href="https://cloud.google.com/" target="_blank" rel="noopener noreferrer">Google Cloud Platform</a> using <strong>App Engine</strong>.</p>
+                    
+                    <div id="screenshotCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+                        <ol class="carousel-indicators" style="filter: invert(1) grayscale(100);">
+                          <li data-target="#screenshotCarousel" data-slide-to="0" class="active"></li>
+                          <li data-target="#screenshotCarousel" data-slide-to="1"></li>
+                          <li data-target="#screenshotCarousel" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img data-src="/assets/images/projects/know-your-vote/know-your-vote-landing-page-screenshot.png" class="lazyload img-fluid rounded" alt="Landing Page of Know Your Vote Site">
+                            <!-- <div class="carousel-caption d-none d-md-block">
+                                <h3 class="my-0 text-dark h5">Landing Page of Know Your Vote site</h3>
+                                <p class="mt-2 mb-0 text-secondary">Site visitors choose their constituency or enter the pincode if they don't know it. Based on their input they will be redirected.</p>
+                            </div> -->
+                          </div>
+                          <div class="carousel-item">
+                            <img data-src="/assets/images/projects/know-your-vote/know-your-vote-constituency-page-screenshot.png" class="lazyload img-fluid rounded" alt="Constituency Page of Know Your Vote Site">
+                            <!-- <div class="carousel-caption d-none d-md-block">
+                                <h3 class="my-0 text-dark h5">Constituency Page of Know Your Vote site</h3>
+                                <p class="mt-2 mb-0 text-secondary">This page shows the related details of the choosen constituency like basic information, details about current Minister of Parliment (MP) and the candidate list who are contesting.</p>
+                            </div> -->
+                          </div>
+                          <div class="carousel-item">
+                            <img data-src="/assets/images/projects/know-your-vote/know-your-vote-candidate-page-screenshot.png" class="lazyload img-fluid rounded" alt="Candidate Page of Know Your Vote Site">
+                            <!-- <div class="carousel-caption d-none d-md-block">
+                                <h3 class="my-0 text-dark h5">Candidate Page of Know Your Vote site</h3>
+                                <p class="mt-2 mb-0 text-secondary">This page shows the related details of the choosen candidate like personal information and other information about their party, financial records and criminal records.</p>
+                            </div> -->
+                          </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#screenshotCarousel" role="button" data-slide="prev" style="filter: invert(1) grayscale(100);">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#screenshotCarousel" role="button" data-slide="next" style="filter: invert(1) grayscale(100);">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                      <p class="figure-caption text--tertiary my-2 text-center">Screenshots of Know Your Vote site</p>
+
+                    <h2>Takeaways</h2>
+                    <p>Though it was a project with a very short deadline, the learning curve was huge. We got a chance to understand the state’s administrative and political framework and the Indian Electoral system’s functioning. We also learned about valid methodologies for data collection.</p>
+                    <p>Our site had 8,000+ unique visitors during the election period, and many personally reached us to let us know how useful the website was for them. They expressed how the site served as a one-stop portal to know about all the candidates contesting in detail.</p>
+                    <p>We also received a few feedbacks for improvements that they wish to see in the next version. Some of the valid queries we received were:</p>
+                    <ul class="my-4">
+                        <li>To localize the website and view it in local/native languages like Tamil, Malayalam, Hindi, etc.</li>
+                        <li>To include articles on improving the voting literacy among the citizens.</li>
+                        <li>To include data about candidates from other districts and states.</li>
+                        <li>Open source or crowdsource the website code to bring in more collaboration for extending it.</li>
+                    </ul>
+
+                    <div class="alert alert-primary mt-5" role="alert">
+                        <h3 class="alert-heading h4">Know Your Vote is getting a revamp!</h3>
+                        <hr>
+                        <p class="mt-3 mb-0">The site is currently offline since we are working on the next version of the website for the <a class="alert-link" href="https://en.wikipedia.org/wiki/2021_Tamil_Nadu_Legislative_Assembly_election" target="_blank" rel="noopener noreferrer">Tamil Nadu Legislative Assembly elections</a> to be held in Tamil Nadu on May 2021 for the 234 seats of the Legislative Assembly in the state of Tamil Nadu in India.</p>
+                        <p class="mt-3 mb-0">We are trying to improve the website by addressing the feedbacks we received earlier. We are also trying to add more features like predictive polls to forecast the result, compare candidates, and include more details about the parties, their manifestos, etc. If you wish to contribute to this project, drop a “Hi” via any social channels linked in this website’s footer.</p>
+                      </div>
+                </section>
+            </div>
+        </article>   
+        </main>
+        <footer>
+            <div class="footer py-4 d-flex flex-column justify-content-center align-items-center text-center">
+                <h2 class="px-3">Wanna talk about design? Let's get in touch!</h2>
+                <div class="footer__icons d-flex justify-content-center align-items-center mt-2 mb-3">
+                    <a class="social-icon" href="mailto:karthik.venkataraman96@gmail.com?Subject=Hello%20Karthik" target="_top"><span class="sr-only">Mail me</span><i class="icon-google"></i></a>
+                    <a class="social-icon" href="https://www.linkedin.com/in/kv96/" target="_blank" rel="noopener noreferrer"><span class="sr-only">View Linkedin Profile</span><i class="icon-linkedin"></i></a>
+                    <a class="social-icon" href="https://www.instagram.com/ux_monk/" target="_blank" rel="noopener noreferrer"><span class="sr-only">View Instagram Profile</span><i class="icon-instagram"></i></a>
+                    <a class="social-icon" href="https://dribbble.com/MrKV" target="_blank" rel="noopener noreferrer"><span class="sr-only">View Dribbble Profile</span><i class="icon-dribbble"></i></a>
+                    <a class="social-icon" href="https://www.behance.net/kv96" target="_blank" rel="noopener noreferrer"><span class="sr-only">View Behance Profile</span><i class="icon-behance"></i></a>
+                    <a class="social-icon" href="https://codepen.io/kv96" target="_blank" rel="noopener noreferrer"><span class="sr-only">View Codepen Profile</span><i class="icon-codepen"></i></a>
+                </div>
+                <div class="footer__divider">&nbsp;</div>
+                <p class="footer__disclaimer mt-3 mb-0">I designed and coded this website from scratch. © <time id="copyrightYear"></time></p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Theme Switcher for GT-XS Devices -->
+    <div class="theme-switcher theme-switcher--gt-xs">
+        <span id="lightThemeSwitch" class="theme-switcher__label" data-theme-option="light">L<br>I<br>G<br>H<br>T</span>
+        <span id="darkThemeSwitch" class="theme-switcher__label" data-theme-option="dark">D<br>A<br>R<br>K</span>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" async></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js" async></script>
+    <script src="/assets/js/main.js"></script>
+
+</body>
+
+</html>

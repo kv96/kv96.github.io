@@ -34,10 +34,7 @@
 .featured-project {
   background-color: var(--secondary-bg);
   margin-top: 1.5rem;
-
-  &:last-child {
-    margin-bottom: 4rem;
-  }
+  margin-bottom: 1.5rem;
 
   .row {
     margin-left: 0;
@@ -64,6 +61,21 @@
     &:hover {
       color: var(--primary-bg);
       background-color: var(--secondary-text);
+    }
+  }
+
+  &__view-all {
+    color: var(--tertiary-text);
+    .icon-arrow-forward {
+      $transition-property: transform;
+      transition:  #{$transition-property} #{$transition-duration} #{$transition-timing-function};;
+    }
+    &:hover {
+      color: var(--primary);
+
+      .icon-arrow-forward {
+        transform: translateX(5px);
+      }
     }
   }
 }
