@@ -140,15 +140,15 @@
                     <p>With the rise in social networks’ dominance, today’s election scene and the voter’s knowledge are heavily influenced by the biased inputs available and consumed in the form of news, videos, and memes, which are fabricated and promoted, leading to citizens exposed to misinformation.</p>
                     <p>Another common issue faced during elections is that major parties with needed funds and resources can reach the people with elaborate campaigns through all mediums. Still, small parties and independent aspirants fall short of such privileges and fail to reach them. Thus making the citizens unaware of such contestants.</p>
 
-                    <h2>Goals</h2>
+                    <h2>An experiment to resolve the problems</h2>
                     <p>To resolve the mentioned problems, we decided to create a website for Indian General Elections conducted in 2019 that showcases all the relevant details about the candidates participating in the election and experiment with it to know how far it can reach the citizens.</p>
                     <p>The election dates were nearing, and we had less than two weeks to design, develop and make the website live, so we decided to concentrate on showcasing the details for Chennai city alone.</p>
                     
                     <h2>Administrative divisions of Chennai</h2>
-                    <p><a class="link" href="https://en.wikipedia.org/wiki/Chennai" target="_blank" rel="noopener noreferrer">Chennai</a>, formerly known as Madras, is the capital of the Indian state of Tamil Nadu. Located on the Coromandel Coast of the Bay of Bengal, it is one of south India’s largest cultural, economic, and educational centers. As Tamil Nadu’s capital, Chennai houses the state executive and legislative headquarters primarily in the Secretariat Buildings in the Fort St George campus.</p>
-                    <p>Chennai has three <a class="link" href="https://en.wikipedia.org/wiki/Parliament_of_India" target="_blank" rel="noopener noreferrer">parliamentary</a> constituencies — <a class="link" href="https://en.wikipedia.org/wiki/Chennai_North_(Lok_Sabha_constituency)" target="_blank" rel="noopener noreferrer">Chennai North</a>, <a class="link" href=https://en.wikipedia.org/wiki/Chennai_Central_(Lok_Sabha_constituency)" target="_blank" rel="noopener noreferrer">Chennai Central</a>, and <a class="link" href="https://en.wikipedia.org/wiki/Chennai_South_(Lok_Sabha_constituency)" target="_blank" rel="noopener noreferrer">Chennai South</a> — and elects 24 Members of the Legislative Assembly (<a class="link" href="https://en.wikipedia.org/wiki/Member_of_the_Legislative_Assembly_(India)" target="_blank" rel="noopener noreferrer">MLAs</a>) to the state legislature. Major parties have the resources and means to campaign across the city and through all media platforms, but smaller parties and independent candidates get hidden in that shadow. Thus citizens go unaware of who is contesting and what they are capable of.</p>
+                    <p><a class="link" href="https://en.wikipedia.org/wiki/Chennai" target="_blank" rel="noopener noreferrer">Chennai</a>, formerly known as Madras, is the capital of the Indian state of Tamil Nadu. Located on the Coromandel Coast of the Bay of Bengal, it is one of south India’s largest cultural, economic, and educational centers.</p>
+                    <p>As Tamil Nadu’s capital, Chennai houses the state executive and legislative headquarters primarily in the Secretariat Buildings in the Fort St George campus. Chennai has three <a class="link" href="https://en.wikipedia.org/wiki/Parliament_of_India" target="_blank" rel="noopener noreferrer">parliamentary</a> constituencies — <a class="link" href="https://en.wikipedia.org/wiki/Chennai_North_(Lok_Sabha_constituency)" target="_blank" rel="noopener noreferrer">Chennai North</a>, <a class="link" href=https://en.wikipedia.org/wiki/Chennai_Central_(Lok_Sabha_constituency)" target="_blank" rel="noopener noreferrer">Chennai Central</a>, and <a class="link" href="https://en.wikipedia.org/wiki/Chennai_South_(Lok_Sabha_constituency)" target="_blank" rel="noopener noreferrer">Chennai South</a> — and elects 24 Members of the Legislative Assembly (<a class="link" href="https://en.wikipedia.org/wiki/Member_of_the_Legislative_Assembly_(India)" target="_blank" rel="noopener noreferrer">MLAs</a>) to the state legislature.</p>
 
-                    <h2>Collecting the needed Data</h2>
+                    <h2>Collecting the needed data</h2>
                     <p>Gathering the data of each candidate was a challenging task. We couldn’t scrap the needed details from their Wikipedia page or articles on the web because we have to provide legit information to the people. Data sourced from the internet must be fact-checked to avoid any discrepancies, and it might consume more time. To make the situation worse, we found some candidates didn’t have any digital footprint that forced us to find some other reliable source.</p>
                     <p>We finally decided to obtain the candidate’s information from the affidavit filed with the government for contesting in the election. We were able to get the following information from it:</p>
                     <ul class="my-4">
@@ -158,41 +158,90 @@
                         <li>Criminal Records</li>
                     </ul>
 
-                    <h2>User Flow</h2>
+                    <h2>User flow</h2>
                     <p>The website has a simple user flow. A site visitor selects the constituency they belong to or enters their Pincode if he doesn’t know it. Based on the selection/input, they are navigated to the respective constituency page with the list of candidates contesting. The visitor then chooses the candidates to know their details.</p>
                     <figure class="figure my-4">
-                        <img data-src="/assets/images/projects/know-your-vote/know-your-vote-site-user-flow.png" class="lazyload figure-img img-fluid rounded" alt="Lighthouse performance score of UXwiki's beta site" width="1110" height="704">
+                        <img data-src="/assets/images/projects/know-your-vote/know-your-vote-site-user-flow.png" class="lazyload figure-img img-fluid rounded" alt="Flowchart showing the user joruney in Know Your Vote site" width="1110" height="704">
                         <figcaption class="figure-caption text--tertiary text-center">Know Your Vote site's user flow</figcaption>
                     </figure>
 
                     <h2>Designing the site</h2>
                     <p>The primary goal was to keep the site’s user interface minimalistic and accessible since the target audience was voters who might have visual impairments like color blindness or low vision. A heavy sans-serif font like Lato was used, and proper colors were chosen for better contrast ratios.</p>
-                    <p>The site’s information architecture (IA) was structured in a way that a visitor can get all the needed information about the constituency and the candidate for better understanding. Cards and tables were used as primary UI components to display the data. The prototypes were designed using Sketch and other graphical assets designed using Adobe Illustrator.</p>
                     <figure class="figure my-4">
-                        <img data-src="/assets/images/projects/know-your-vote/know-your-vote-information-architecture.png" class="lazyload figure-img img-fluid rounded" alt="Lighthouse performance score of UXwiki's beta site" width="1110" height="850">
-                        <figcaption class="figure-caption text--tertiary text-center">Know Your Vote Information Architecture</figcaption>
+                        <img data-src="/assets/images/projects/know-your-vote/know-your-vote-style-guide.png" class="lazyload figure-img img-fluid rounded" alt="Image showing the typography and color system of Know Your Vote site" width="1110" height="694">
+                        <figcaption class="figure-caption text--tertiary text-center">Style guide of Know Your Vote Site</figcaption>
+                    </figure>
+                    <p>The site’s information architecture (IA) was structured in a way that a visitor can get all the needed information about the constituency and the candidate for better understanding. Cards and tables were used as primary UI components to display the data. The prototypes were designed using Sketch, and branding assets were designed using Adobe Illustrator.</p>
+                    <figure class="figure my-4">
+                        <img data-src="/assets/images/projects/know-your-vote/know-your-vote-information-architecture.png" class="lazyload figure-img img-fluid rounded" alt="Flowchart showing the information architecture of Know Your Vote site" width="1110" height="850">
+                        <figcaption class="figure-caption text--tertiary text-center">Information Architecture of Know Your Vote site</figcaption>
+                    </figure>
+
+                    <figure class="figure my-4">
+                        <img data-src="/assets/images/projects/know-your-vote/know-your-vote-logo-breakdown.png" class="lazyload figure-img img-fluid rounded" alt="Image depicting the breakdown of Know Your Vote site's Logo" width="1110" height="850">
+                        <figcaption class="figure-caption text--tertiary text-center">Breakdown of Know Your Vote site logo</figcaption>
                     </figure>
 
                     <h2>Developing the site</h2>
-                    <p>We used a tech stack that was easy and quick to implement. I worked on the front end development, and Hariprasad worked on the back end.</p>
+                    <p>We used a tech stack that was easy and quick to implement. I worked on the front end development, and Hariprasad worked on the back end. The basic development work was completed within 3 days, and we had thorough testing by checking the usability and performing cross-browser testing on multiple devices and platforms.</p>
                     <p>The front end was built with <a class="link" href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">Bootstrap</a>, and custom styles were written using SCSS. <a class="link" href="https://jquery.com/" target="_blank" rel="noopener noreferrer">JQuery</a> was used to perform DOM manipulations, event handling, and make AJAX calls to fetch candidate and constituency details. <a class="link" href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener noreferrer">WCAG guidelines</a> were followed to achieve the AA level of Conformance, and valid <a class="link" href="https://www.w3.org/WAI/standards-guidelines/aria/" target="_blank" rel="noopener noreferrer">WAI-ARIA</a> attributes were added to the HTML elements to help users access the website via assistive technologies like Screenreaders. Chrome Lighthouse audit was performed to double-check, and suggested fixes were implemented.</p>
                     <p><a class="link" href="https://golang.org/" target="_blank" rel="noopener noreferrer">Golang</a> was used for the backend that powered the APIs and to handle navigational routing. All the raw data about the candidates and constituencies were stored in JSON format and processed during GET requests. The source code was maintained in Github, and the website was hosted in <a class="link" href="https://cloud.google.com/" target="_blank" rel="noopener noreferrer">Google Cloud Platform</a> using <strong>App Engine</strong>.</p>
+                    
+                    <div id="screenshotCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+                        <ol class="carousel-indicators" style="filter: invert(1) grayscale(100);">
+                          <li data-target="#screenshotCarousel" data-slide-to="0" class="active"></li>
+                          <li data-target="#screenshotCarousel" data-slide-to="1"></li>
+                          <li data-target="#screenshotCarousel" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img data-src="/assets/images/projects/know-your-vote/know-your-vote-landing-page-screenshot.png" class="lazyload img-fluid rounded" alt="Landing Page of Know Your Vote Site">
+                            <!-- <div class="carousel-caption d-none d-md-block">
+                                <h3 class="my-0 text-dark h5">Landing Page of Know Your Vote site</h3>
+                                <p class="mt-2 mb-0 text-secondary">Site visitors choose their constituency or enter the pincode if they don't know it. Based on their input they will be redirected.</p>
+                            </div> -->
+                          </div>
+                          <div class="carousel-item">
+                            <img data-src="/assets/images/projects/know-your-vote/know-your-vote-constituency-page-screenshot.png" class="lazyload img-fluid rounded" alt="Constituency Page of Know Your Vote Site">
+                            <!-- <div class="carousel-caption d-none d-md-block">
+                                <h3 class="my-0 text-dark h5">Constituency Page of Know Your Vote site</h3>
+                                <p class="mt-2 mb-0 text-secondary">This page shows the related details of the choosen constituency like basic information, details about current Minister of Parliment (MP) and the candidate list who are contesting.</p>
+                            </div> -->
+                          </div>
+                          <div class="carousel-item">
+                            <img data-src="/assets/images/projects/know-your-vote/know-your-vote-candidate-page-screenshot.png" class="lazyload img-fluid rounded" alt="Candidate Page of Know Your Vote Site">
+                            <!-- <div class="carousel-caption d-none d-md-block">
+                                <h3 class="my-0 text-dark h5">Candidate Page of Know Your Vote site</h3>
+                                <p class="mt-2 mb-0 text-secondary">This page shows the related details of the choosen candidate like personal information and other information about their party, financial records and criminal records.</p>
+                            </div> -->
+                          </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#screenshotCarousel" role="button" data-slide="prev" style="filter: invert(1) grayscale(100);">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#screenshotCarousel" role="button" data-slide="next" style="filter: invert(1) grayscale(100);">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                      <p class="figure-caption text--tertiary my-2 text-center">Screenshots of Know Your Vote site</p>
 
                     <h2>Takeaways</h2>
-                    <p>Though it was a project with a very short deadline, the learning curve was huge. We got a chance to understand the state’s administrative and political framework and the Indian Electoral system’s functioning. We also learned about valid methods for data collection.</p>
-                    <p>Our site had more than 8000 unique visitors during that period, and we had received a few feedbacks for improvements that they wish to see in the next version. Some of the valid queries we received were:</p>
+                    <p>Though it was a project with a very short deadline, the learning curve was huge. We got a chance to understand the state’s administrative and political framework and the Indian Electoral system’s functioning. We also learned about valid methodologies for data collection.</p>
+                    <p>Our site had more than 8,000+ unique visitors during the election period, and we had received a few feedbacks for improvements that they wish to see in the next version. Some of the valid queries we received were:</p>
                     <ul class="my-4">
-                        <li>To localize the website and view it in local languages like Tamil, Malayalam, Hindi, etc.</li>
+                        <li>To localize the website and view it in local/native languages like Tamil, Malayalam, Hindi, etc.</li>
                         <li>To include articles on improving the voting literacy among the citizens.</li>
                         <li>To include data about candidates from other districts and states.</li>
                         <li>Open source or crowdsource the website code to bring in more collaboration for extending it.</li>
                     </ul>
 
                     <div class="alert alert-primary mt-5" role="alert">
-                        <h4 class="alert-heading">Know Your Vote is getting a revamp!</h4>
+                        <h3 class="alert-heading h4">Know Your Vote is getting a revamp!</h3>
                         <hr>
                         <p class="mt-3 mb-0">The site is currently offline since we are working on the next version of the website for the <a class="alert-link" href="https://en.wikipedia.org/wiki/Tamil_Nadu_Legislative_Assembly" target="_blank" rel="noopener noreferrer">Tamil Nadu Legislative Assembly elections</a> to be held in Tamil Nadu on May 2021 for the 234 seats of the Legislative Assembly in the state of Tamil Nadu in India.</p>
-                        <p class="mt-3 mb-0">We are trying to improve the website by addressing the queries we received earlier. We are also trying to add more features like predictive polls to forecast the result.</p>
+                        <p class="mt-3 mb-0">We are trying to improve the website by addressing the queries we received earlier. We are also trying to add more features like predictive polls to forecast the result. If you wish to contribute to this project, drop a “Hi” via any social channels linked in this website’s footer.</p>
                       </div>
                 </section>
             </div>
