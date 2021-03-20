@@ -14,9 +14,9 @@
   "author": "Karthik Venkataraman",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^10.2.4",
-    "postcss": "^8.2.5",
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.8",
     "postcss-cli": "^8.3.1",
-    "sass": "^1.32.6"
+    "sass": "^1.32.8"
   }
 }
