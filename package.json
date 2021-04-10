@@ -7,6 +7,7 @@
     "install": "npm i -D sass postcss postcss-cli autoprefixer",
     "build": "npm run compile-scss && npm run prefix-overwrite-css",
     "compile-scss": "sass assets/scss/style.scss assets/css/style.css --style=compressed",
+    "compile-scss:dev": "sass assets/scss/style.scss assets/css/style.css --watch",
     "prefix-css": "npx postcss assets/css/style.css --use autoprefixer -o assets/css/style-prefixed.css -m",
     "prefix-overwrite-css": "npx postcss assets/css/style.css --use autoprefixer -r -m",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,9 +15,9 @@
   "author": "Karthik Venkataraman",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^10.1.0",
-    "postcss": "^8.2.1",
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.9",
     "postcss-cli": "^8.3.1",
-    "sass": "^1.30.0"
+    "sass": "^1.32.8"
   }
 }
