@@ -2,7 +2,7 @@ const HIGHTLIGHT_JS_REQUIRED = $("body").data("highlightjs-required");
 const HIGHLIGHT_JS_LINKS = {
   js: "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js",
   css_light: "https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github.css",
-  css_dark:"https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/vs2015.css",
+  css_dark: "https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/vs2015.css",
 };
 
 ////// THEME ///////
@@ -42,7 +42,16 @@ function initTheme() {
 
 function loadHighlightJsScript() {
   $.getScript(HIGHLIGHT_JS_LINKS.js, function () {
-    hljs.highlightAll();
+    $("[data-code-file-path]").each(function (i) {
+      let $this = $(this);
+      let $filePath = $this.data("code-file-path");
+      let $fileType = $this.data("code-lang");
+      $.get($filePath, function (data) {
+        $this.text(data);
+        $this.addClass($fileType);
+        hljs.highlightElement($this.get(0));
+      });
+    });
   });
 }
 

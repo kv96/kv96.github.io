@@ -82,212 +82,28 @@
                     <div class="d-flex justify-space-between bg--secondary text--secondary border-bottom border--primary py-2 px-3 rounded-top">
                         <span class="code-snippet__file-name">date-time.tsx</span>
                     </div>
-                    <pre class="mb-0 pre-scrollable"><code class="language-typescript rounded-bottom p-2 p-sm-3 code-snippet__code">import { Component, Prop, h, State } from '@stencil/core';
-import { dateTimeJson } from "../../utils/types";
-@Component({
-    tag: 'date-time',
-    styleUrl: 'date-time.scss',
-    shadow: true,
-})
-export class dateTime {
-    /**
-    *  Timezone in which the date and time should be shown. Default is browser timezone.
-    */
-    @Prop() timeZone: string = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    
-    /**
-    *  Should the time keep updating. Default is `false`
-    */
-    @Prop() shouldUpdate: boolean = false;
+                    <pre class="mb-0 pre-scrollable"><code class="rounded-bottom p-2 p-sm-3 code-snippet__code" data-code-file-path="https://raw.githubusercontent.com/k17n/stencil-date-time-component/main/src/components/date-time/date-time.tsx" data-code-lang="typescript"><div class="spinner-border text-secondary d-block mx-auto my-5" role="status"><span class="sr-only">Loading...</span></div></code></pre></div>
 
-    @State() time: number = Date.now();
-    @State() dateTimeJson: dateTimeJson;
+                    <div class="code-snippet border border--primary rounded">
+                        <div class="d-flex justify-space-between bg--secondary text--secondary border-bottom border--primary py-2 px-3 rounded-top">
+                            <span class="code-snippet__file-name">date-time.scss</span>
+                        </div>
+                        <pre class="mb-0"><code class="rounded-bottom p-2 p-sm-3 code-snippet__code" data-code-file-path="https://raw.githubusercontent.com/k17n/stencil-date-time-component/main/src/components/date-time/date-time.scss" data-code-lang="scss"><div class="spinner-border text-secondary d-block mx-auto my-5" role="status"><span class="sr-only">Loading...</span></div></code></pre>
+                    </div>
 
-    private locale: string = Intl.DateTimeFormat().resolvedOptions().locale;
-    private updateInterval: number = 1000;
-    private timer: number;
+                    <div class="code-snippet border border--primary rounded">
+                        <div class="d-flex justify-space-between bg--secondary text--secondary border-bottom border--primary py-2 px-3 rounded-top">
+                            <span class="code-snippet__file-name">analog-clock.tsx</span>
+                        </div>
+                        <pre class="mb-0 pre-scrollable"><code class="rounded-bottom p-2 p-sm-3 code-snippet__code" data-code-file-path="https://raw.githubusercontent.com/k17n/stencil-date-time-component/main/src/components/analog-clock/analog-clock.tsx" data-code-lang="typescript"><div class="spinner-border text-secondary d-block mx-auto my-5" role="status"><span class="sr-only">Loading...</span></div></code></pre>
+                    </div>
 
-    private getDateTimeJSON(time: number): any {
-        const currentDateString = new Date(time);
-        const dateTimeJson = {
-            date: currentDateString.toLocaleDateString(this.locale, { timeZone: this.timeZone }),
-            time: currentDateString.toLocaleTimeString(this.locale, { timeZone: this.timeZone }),
-            timeZone: this.timeZone
-        }
-        return dateTimeJson;
-    }
-
-    connectedCallback() {
-        if (this.shouldUpdate) {
-            this.timer = window.setInterval(() => {
-                this.time = Date.now();
-            }, this.updateInterval);
-        }
-    }
-
-    disconnectedCallback() {
-        window.clearInterval(this.timer);
-    }
-
-    render() {
-        const dateTimeJson = this.getDateTimeJSON(this.time);
-        return (
-            &lt;div&gt;
-                &lt;div&gt;Date: {dateTimeJson.date}&lt;/div&gt;
-                &lt;div&gt;Time: {dateTimeJson.time}&lt;/div&gt;
-                &lt;div&gt;Time Zone: {dateTimeJson.timeZone}&lt;/div&gt;
-            &lt;/div&gt;
-        );
-    }
-}</code></pre></div>
-
-<div class="code-snippet border border--primary rounded">
-    <div class="d-flex justify-space-between bg--secondary text--secondary border-bottom border--primary py-2 px-3 rounded-top">
-        <span class="code-snippet__file-name">date-time.scss</span>
-    </div>
-    <pre class="mb-0"><code class="language-scss rounded-bottom p-2 p-sm-3 code-snippet__code">:host {
-    display: block;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
-.date-time {
-    padding: 1rem;
-    border-radius: 0.5rem;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
-    display: inline-block;
-    background-color: #e0f2fe;
-    color: #003a5c;
-}</code></pre></div>
-
-<div class="code-snippet border border--primary rounded">
-    <div class="d-flex justify-space-between bg--secondary text--secondary border-bottom border--primary py-2 px-3 rounded-top">
-        <span class="code-snippet__file-name">analog-clock.tsx</span>
-    </div>
-    <pre class="mb-0 pre-scrollable"><code class="language-typescript rounded-bottom p-2 p-sm-3 code-snippet__code">import { Component, Prop, h } from '@stencil/core';
-@Component({
-    tag: 'analog-clock',
-    styleUrl: 'analog-clock.scss',
-    shadow: true,
-})
-export class analogClock {
-    /**
-    *  Time to be displayed in the clock.
-    */
-    @Prop() time: number = Date.now();
-
-    /**
-    *  Timezone in which the date and time should be shown. Default is browser timezone.
-    */
-    @Prop() timeZone: string = Intl.DateTimeFormat().resolvedOptions().timeZone;
-
-    private locale: string = Intl.DateTimeFormat().resolvedOptions().locale;
-
-    private getClockHandStyles(time: number, timeZone: string): any {
-
-        // Get current locale time based on given timezone
-        const currentLocaleString = new Date(time).toLocaleString(this.locale, { timeZone: timeZone });
-
-        // Get date string based on generated locale time 
-        const DateString = new Date(currentLocaleString);
-
-        // Get the hours, minutes and seconds from the date string
-        const hours = DateString.getHours();
-        const minutes = DateString.getMinutes();
-        const seconds = DateString.getSeconds();
-
-        // Calculating the rotating fraction --> how many fraction to rotate for each hand.
-        const secondsFraction = seconds / 60;
-        const minutesFraction = (secondsFraction + minutes) / 60;
-        const hoursFraction = (minutesFraction + hours) / 12;
-
-        // Degrees to Rotate
-        const secondsRotate = secondsFraction * 360;
-        const minutesRotate = minutesFraction * 360;
-        const hoursRotate = hoursFraction * 360;
-
-        // Generate CSS Transform style
-        let clockHandStyles = {
-            secondHand: `rotate(${secondsRotate}deg)`,
-            minuteHand: `rotate(${minutesRotate}deg)`,
-            hourHand: `rotate(${hoursRotate}deg)`
-        }
-
-        return clockHandStyles;
-    }
-
-    render() {
-        const clockHandStyles = this.getClockHandStyles(this.time, this.timeZone);
-        return (
-            &lt;div class=&quot;clock&quot;&gt;
-                &lt;div class=&quot;hand hour&quot; style={{ transform: &grave;translateX(-50%) ${clockHandStyles.hourHand}&grave; }}&gt;&lt;/div&gt;
-                &lt;div class=&quot;hand minute&quot; style={{ transform: &grave;translateX(-50%) ${clockHandStyles.minuteHand}&grave; }}&gt;&lt;/div&gt;
-                &lt;div class=&quot;hand second&quot; style={{ transform: &grave;translateX(-50%) ${clockHandStyles.secondHand}&grave; }}&gt;&lt;/div&gt;
-            &lt;/div&gt;
-        );
-    }
-}
-        </code></pre></div>
-
-<div class="code-snippet border border--primary rounded">
-    <div class="d-flex justify-space-between bg--secondary text--secondary border-bottom border--primary py-2 px-3 rounded-top">
-        <span class="code-snippet__file-name">analog-clock.scss</span>
-    </div>
-    <pre class="mb-0 pre-scrollable"><code class="language-scss rounded-bottom p-2 p-sm-3 code-snippet__code">:host {
-    display: block;
-}
-
-.clock {
-    width: 100px;
-    height: 100px;
-    background-color: white;
-    border-radius: 50%;
-    border: 4px solid #456b90;
-    box-shadow: rgba(0, 58, 92, 0.25) 0px 25px 50px -12px;
-
-    position: relative;
-    margin: 1rem auto;
-
-    &::before {
-        content: '';
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        background-color: #e46405;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 999;
-    }
-
-    &__hand {
-        position: absolute;
-        bottom: 50%;
-        left: 50%;
-        transform: translateX(-50%) rotate(90deg);
-        transform-origin: bottom;
-        border-top-left-radius: 7px;
-        border-top-right-radius: 7px;
-
-        &--hour {
-            width: 4px;
-            height: 28%;
-            background-color: #003a5c;
-        }
-
-        &--minute {
-            width: 4px;
-            height: 38%;
-            background-color: #003a5c;
-        }
-
-        &--second {
-            width: 2px;
-            height: 40%;
-            background-color: #e46405;
-        }
-    }
-}</code></pre></div>
+                    <div class="code-snippet border border--primary rounded">
+                        <div class="d-flex justify-space-between bg--secondary text--secondary border-bottom border--primary py-2 px-3 rounded-top">
+                            <span class="code-snippet__file-name">analog-clock.scss</span>
+                        </div>
+                        <pre class="mb-0 pre-scrollable"><code class="rounded-bottom p-2 p-sm-3 code-snippet__code" data-code-file-path="https://raw.githubusercontent.com/k17n/stencil-date-time-component/main/src/components/analog-clock/analog-clock.scss" data-code-lang="scss"><div class="spinner-border text-secondary d-block mx-auto my-5" role="status"><span class="sr-only">Loading...</span></div></code></pre>
+                    </div>
                 </section>
             </div>
         </article>   
