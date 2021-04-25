@@ -1,0 +1,11 @@
+.code-snippet {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  &__file-name{
+    font-size: 0.75rem;
+    font-family: var(--font-family-monospace); // Will be fetched from Bootstrap CSS :root
+  }
+  &__code {
+    font-size: 87.5%;
+  }
+}

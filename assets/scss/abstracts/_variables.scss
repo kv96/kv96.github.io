@@ -13,6 +13,9 @@ $light-theme-secondary-bg:#f6f6f6;
 $light-theme-primary-text:#000000;
 $light-theme-secondary-text:#333333;
 $light-theme-tertiary-text:#666666;
+$light-theme-primary-border:#dee2e6;
+$light-theme-scroll-bar-color:#d6dee1;
+$light-theme-scroll-bar-hover-color:#a8bbbf;
 $light-theme-shot-hover-bg: rgba($light-theme-primary-color, 0.85);
 
 $light-theme-colors:(
@@ -22,6 +25,9 @@ $light-theme-colors:(
     "primary-text":    $light-theme-primary-text,
     "secondary-text":  $light-theme-secondary-text,
     "tertiary-text":   $light-theme-tertiary-text,
+    "primary-border":  $light-theme-primary-border,
+    "scroll-bar-color":  $light-theme-scroll-bar-color,
+    "scroll-bar-hover-color":  $light-theme-scroll-bar-hover-color,
     "shot-hover-bg":   $light-theme-shot-hover-bg 
     );
 
@@ -32,6 +38,9 @@ $dark-theme-secondary-bg:#222222;
 $dark-theme-primary-text:#ffffff;
 $dark-theme-secondary-text:#C9C9C9;
 $dark-theme-tertiary-text:#898989;
+$dark-theme-primary-border:#424242;
+$dark-theme-scroll-bar-color:#424242;
+$dark-theme-scroll-bar-hover-color:#616161;
 $dark-theme-shot-hover-bg: rgba($dark-theme-primary-color, 0.85);
 
 $dark-theme-colors:(
@@ -41,6 +50,9 @@ $dark-theme-colors:(
     "primary-text":    $dark-theme-primary-text,
     "secondary-text":  $dark-theme-secondary-text,
     "tertiary-text":   $dark-theme-tertiary-text,
+    "primary-border":  $dark-theme-primary-border,
+    "scroll-bar-color":  $dark-theme-scroll-bar-color,
+    "scroll-bar-hover-color":  $dark-theme-scroll-bar-hover-color,
     "shot-hover-bg":   $dark-theme-shot-hover-bg 
 );
 
