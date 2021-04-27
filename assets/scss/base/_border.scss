@@ -1,0 +1,8 @@
+.border {
+  &--theme-primary {
+    border-color: var(--primary) !important;
+  }
+  &--primary {
+    border-color: var(--primary-border) !important;
+  }
+}
