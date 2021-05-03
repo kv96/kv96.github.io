@@ -5,14 +5,33 @@ const HIGHLIGHT_JS_LINKS = {
   css_dark: "https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/vs2015.css",
 };
 
-////// THEME ///////
-// Set theme on page load
+
+//////// FUNCTIONS TO INITIALISE ////////
 $(document).ready(function () {
   initTheme(); // on page load, if user has already selected a specific theme -> apply it
+  detectPlatform(); // detect OS platform
   if (HIGHTLIGHT_JS_REQUIRED) {
     loadHighlightJsScript();
   }
 });
+
+//////// HIGHLIGHT JS ////////
+function loadHighlightJsScript() {
+  $.getScript(HIGHLIGHT_JS_LINKS.js, function () {
+    $("[data-code-file-path]").each(function (i) {
+      let $this = $(this);
+      let $filePath = $this.data("code-file-path");
+      let $fileType = $this.data("code-lang");
+      $.get($filePath, function (data) {
+        $this.text(data);
+        $this.addClass($fileType);
+        hljs.highlightElement($this.get(0));
+      });
+    });
+  });
+}
+
+//////// THEME ////////
 
 // Check local storage for any theme attribute and apply it
 function initTheme() {
@@ -38,21 +57,6 @@ function initTheme() {
       toggleHighlightJsTheme();
     }
   }
-}
-
-function loadHighlightJsScript() {
-  $.getScript(HIGHLIGHT_JS_LINKS.js, function () {
-    $("[data-code-file-path]").each(function (i) {
-      let $this = $(this);
-      let $filePath = $this.data("code-file-path");
-      let $fileType = $this.data("code-lang");
-      $.get($filePath, function (data) {
-        $this.text(data);
-        $this.addClass($fileType);
-        hljs.highlightElement($this.get(0));
-      });
-    });
-  });
 }
 
 function toggleHighlightJsTheme(theme) {
@@ -122,6 +126,17 @@ $(".theme-switcher__btn").click(function () {
   }
 });
 
-////// COPYRIGHT YEAR ///////
+//////// DETECT USER AGENT ////////
+function detectPlatform(){
+  var isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+  if(isMac){
+    document.body.classList.add("is-mac-device");
+  }
+  else{
+    document.body.classList.add("is-non-mac-device");
+  }
+}
+
+//////// COPYRIGHT YEAR ////////
 var currentYear = new Date().getFullYear();
 $("#copyrightYear").text(currentYear);

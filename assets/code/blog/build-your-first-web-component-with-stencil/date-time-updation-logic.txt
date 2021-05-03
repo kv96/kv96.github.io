@@ -1,0 +1,11 @@
+connectedCallback() {
+    if (this.shouldUpdate) {
+        this.timer = window.setInterval(() => {
+            this.time = Date.now();
+        }, this.updateInterval);
+    }
+}
+
+disconnectedCallback() {
+    window.clearInterval(this.timer);
+}

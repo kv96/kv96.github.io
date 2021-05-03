@@ -1,0 +1,9 @@
+private getDateTimeJSON(time: number): any {
+    const currentDateString = new Date(time);
+    const dateTimeJson = {
+        date: currentDateString.toLocaleDateString(this.locale, { timeZone: this.timeZone }),
+        time: currentDateString.toLocaleTimeString(this.locale, { timeZone: this.timeZone }),
+        timeZone: this.timeZone
+    }
+    return dateTimeJson;
+}

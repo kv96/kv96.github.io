@@ -1,0 +1,8 @@
+<div class="date-time">
+    {showClock &&
+        <analog-clock time={this.time} timeZone={this.timeZone}></analog-clock>
+    }
+    <div><b>Date:</b> <time>{dateTimeJson.date}</time></div>
+    <div><b>Time:</b> <time>{dateTimeJson.time}</time></div>
+    <div><b>Time Zone:</b> {dateTimeJson.timeZone}</div>
+</div>

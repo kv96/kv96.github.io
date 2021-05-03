@@ -1,0 +1,20 @@
+private splitTimeString(timeString: string) {
+    // Occurence of first ':' in the time string
+    const firstSplitIndex = timeString.indexOf(':')
+
+    // Occurence of second ':' in the time string
+    const secondSplitIndex = timeString.indexOf(':', firstSplitIndex + 1)
+
+    // Occurence of space ' ' in the time string. It will be used to delimit the string and omit the AM/PM part
+    const delimitIndex = timeString.indexOf(' ');
+
+    let splitTimeJSON = {
+        hours: '',
+        minutes: '',
+        seconds: ''
+    }
+    splitTimeJSON.hours = timeString.substring(0, firstSplitIndex);
+    splitTimeJSON.minutes = timeString.substring(firstSplitIndex + 1, secondSplitIndex);
+    splitTimeJSON.seconds = timeString.substring(secondSplitIndex + 1, delimitIndex);
+    return splitTimeJSON;
+}
