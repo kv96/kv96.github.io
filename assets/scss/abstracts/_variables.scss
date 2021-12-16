@@ -33,14 +33,14 @@ $light-theme-colors:(
 
 // Dark Theme Colors
 $dark-theme-primary-color:#0AD7A7;
-$dark-theme-primary-bg:#000000;
-$dark-theme-secondary-bg:#222222;
+$dark-theme-primary-bg:#202124;
+$dark-theme-secondary-bg:#3c4043;
 $dark-theme-primary-text:#ffffff;
-$dark-theme-secondary-text:#C9C9C9;
-$dark-theme-tertiary-text:#898989;
-$dark-theme-primary-border:#424242;
-$dark-theme-scroll-bar-color:#424242;
-$dark-theme-scroll-bar-hover-color:#616161;
+$dark-theme-secondary-text:#e8eaed;
+$dark-theme-tertiary-text:#9aa0a6;
+$dark-theme-primary-border:#5f6368;
+$dark-theme-scroll-bar-color:#5f6368;
+$dark-theme-scroll-bar-hover-color:darken($dark-theme-scroll-bar-color,1);
 $dark-theme-shot-hover-bg: rgba($dark-theme-primary-color, 0.85);
 
 $dark-theme-colors:(
