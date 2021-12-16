@@ -68,7 +68,7 @@
     color: var(--tertiary-text);
     .icon-arrow-forward {
       $transition-property: transform;
-      transition:  #{$transition-property} #{$transition-duration} #{$transition-timing-function};;
+      transition:  #{$transition-property} #{$transition-duration} #{$transition-timing-function};
     }
     &:hover {
       color: var(--primary);
@@ -76,6 +76,39 @@
       .icon-arrow-forward {
         transform: translateX(5px);
       }
+    }
+  }
+}
+
+.dev-deck{
+  &__item{
+    $transition-property: transform;
+    transition:  #{$transition-property} #{$transition-duration} #{$transition-timing-function};
+    height: 125px;
+    width: 125px;
+    @include media-breakpoint-up(sm) {
+    height: 175px;
+    width: 175px;
+    }
+    &:hover{
+      text-decoration: none;
+      transform: scale(1.05);
+    }
+    &--1{
+      background-color:#007DFB;
+    }
+    &--2{
+      background-color:#805CF5;
+    }
+    &--3{
+      background-color:#fa709a;
+    }
+    &--4{
+      background-color:#EE7A40;
+    }
+    &__image{
+      width: 55%;
+      height: auto;
     }
   }
 }
