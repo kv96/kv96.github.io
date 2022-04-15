@@ -5,16 +5,17 @@
     <!-- Meta Tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Check out the story of how we built a comprehensive glossary of User Experience (UX) terms and definitions for UX professionals.">
+    <meta name="description" content="">
     <meta name="theme-color" content="#f6f6f6">
+    <meta name="robots" content="noindex">
 
-    <meta property="og:title" content="Know Your Vote - Election Information Portal | Karthik Venkataraman">
-    <meta property="og:description" content="Check out the story of how we built a comprehensive glossary of User Experience (UX) terms and definitions for UX professionals.">
+    <meta property="og:title" content="Spendely - An expense manager for International Students | Blog | Karthik Venkataraman">
+    <meta property="og:description" content="">
     <meta property="og:image" content="https://www.karthikvenkataraman.in/assets/images/projects/uxwiki-banner.png">
     <meta property="og:url" content="https://www.karthikvenkataraman.in/projects/uxwiki">
     <meta name="twitter:card" content="summary_large_image">
 
-    <title>About | Karthik Venkataraman</title>
+    <title>Spendely - An expense manager for International Students | Blog | Karthik Venkataraman</title>
     <link rel="icon" href="/assets/images/favicon.png" type="image/png">
 
     <!-- Preloads -->
@@ -26,7 +27,7 @@
     <link href="/assets/css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body data-highlightjs-required="true">
     <div class="layout" role="document">
         <header>
             <nav class="navbar navbar-expand-lg site-navbar pt-4">
@@ -57,8 +58,11 @@
                             <li class="nav-item">
                                 <a class="nav-link px-lg-3" href="/">Home</a>
                             </li>
-                            <li class="nav-item active">
-                                <a class="nav-link px-lg-3" href=".">Blog<span class="sr-only">(current)</span></a>
+                            <!-- <li class="nav-item active">
+                                <a class="nav-link px-lg-3" href=".">Projects<span class="sr-only">(current)</span></a>
+                            </li> -->
+                            <li class="nav-item">
+                                <a class="nav-link px-lg-3" href="/blog/">Blog</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link px-lg-3" href="/about/">About</a>
@@ -72,28 +76,44 @@
             </nav>
         </header>
         <main class="main" tabindex="-1">
-            <section class="container my-3 my-sm-5 py-5">
-                <h1>Blog</h1>
-                <ul class="list-unstyled">
-                    <!-- <li>
-                        <a class="d-block text-decoration-none" href="./build-your-first-web-component-with-stencil">
-                            <div class="border border--primary rounded my-4 p-3 position-relative">
-                                <h2 class="h5 text--theme-primary">Build your first web component with Stencil</h2>
-                                <p class="text--tertiary mb-0">Check out the story of how we built a comprehensive glossary of User Experience (UX) terms and definitions for UX professionals.</p>
-                            </div>
-                        </a>
-                    </li> -->
-
-                    <li>
-                        <a class="d-block text-decoration-none" href="./spendeley-expense-manager">
-                            <div class="border border--primary rounded my-4 p-3 position-relative">
-                                <h2 class="h5 text--theme-primary">Spendely - An expense manager for International Students</h2>
-                                <p class="text--tertiary mb-0">A conceptual app designed for international students to manage their expense efficiently.</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </section>
+         <article class="project">
+            <div class="project__content my-3 my-sm-5 py-5">
+                <section class="container mb-5">
+                    <h1>Spendely - An expense manager for International Students</h1>
+                </section>
+                <section class="container">
+                    <p>It is no doubt that money is a valuable asset. Especially for international students, who have taken hefty educational loans and spend it abroad for tuition and living expenses, every penny counts. As an international fee-paying student myself, finding an effective expense tracker has been a challenge. Browsing through the app store feels like searching a diamond in a huge mountain of gems. Thus we fall back to legacy tools like spreadsheets. A typical expense spreadsheet maintained by a student from India studying in Sweden is shown in the figure below.</p>
+                    <figure class="figure my-4">
+                        <img data-src="/assets/images/blog/spendeley-expense-manager/spreadsheet.png" class="lazyload figure-img img-fluid rounded" alt="Banner image showing the landing page of UXwiki" width="1110" height="833">
+                        <figcaption class="figure-caption text--tertiary text-center">Spreadsheet maintained by a student from India studying in Sweden</figcaption>
+                    </figure>
+                    <p>Spendely is a robust application showing spend trends, forecasts, historical comparisons, reports and insights for students to analyse their spend patterns. Students can add their home currency to view and be aware of how much they spend in their currency. The dashboard in the app is an important feature that is designed to provide an overview of their spending. Visualisations in the dashboard are generated from the expense data collected through Add Expense form.</p>
+                    <figure class="figure my-4">
+                        <img data-src="/assets/images/blog/spendeley-expense-manager/add-expense.png" class="lazyload figure-img img-fluid rounded" alt="Banner image showing the landing page of UXwiki" width="1110" height="833">
+                        <figcaption class="figure-caption text--tertiary text-center">"Add Expense" form</figcaption>
+                    </figure>
+                    <p>Dashboard in Figure 3 has various widgets like recent expenses, top 10 expenses, category wise split, group-wise split and payment mode wise split. These widgets are essential for a student to understand where they are spending money and how it is being spent. The primary widget “Expenses” shows the amount spend in the current month and the amount left to reach the budget limit. It tries to compare current month expenditure with previous month data. The area chart in that widget showcases the expense trend of the current month comparing it to a line chart showing the trend of the previous month. In this case, March 2022 vs February 2022. Other charts available in the carousel are</p>
+                    <ul>
+                        <li>Current Month vs Average Expense per Month</li>
+                        <li>Current Month vs Same Month Last Year</li>
+                    </ul>
+                    <p>Visualisations are chosen in a way to inform the student about their spending effectively. Bar charts and doughnut charts are easy to perceive and scale well for many data points. Students can compare current month data with previous month data at individual widget level by clicking the compare icon.</p>
+                    <figure class="figure my-4">
+                        <img data-src="/assets/images/blog/spendeley-expense-manager/dashboard-SEK-view.png" class="lazyload figure-img img-fluid rounded" alt="Banner image showing the landing page of UXwiki" width="1110" height="833">
+                        <figcaption class="figure-caption text--tertiary text-center">"Dashboard" tab in Spendely</figcaption>
+                    </figure>
+                    <figure class="figure my-4">
+                        <img data-src="/assets/images/blog/spendeley-expense-manager/widget-level-comparison.png" class="lazyload figure-img img-fluid rounded" alt="Banner image showing the landing page of UXwiki" width="1110" height="833">
+                        <figcaption class="figure-caption text--tertiary text-center">Widget level monthly comparison shown in the "Dashboard" tab</figcaption>
+                    </figure>
+                    <p>Students can also view their expense data in their home currency or currencies of their preference which they can configure under “Settings”. This view is obtained by clicking the currency selector in the top right corner. They can view the data in the exchange rate or even at the historical rate where expenses on a specific day show the home currency value of that day. Figure 5 shows the dashboard seen in INR view as set by our persona Rahul. In this case, it was assumed 1 SEK = 10 INR.</p>
+                    <figure class="figure my-4">
+                        <img data-src="/assets/images/blog/spendeley-expense-manager/dashboard-INR-view.png" class="lazyload figure-img img-fluid rounded" alt="Banner image showing the landing page of UXwiki" width="1110" height="833">
+                        <figcaption class="figure-caption text--tertiary text-center">"Dashboard" viewed in INR currency</figcaption>
+                    </figure>
+                </section>
+            </div>
+        </article>   
         </main>
         <footer>
             <div class="footer py-4 d-flex flex-column justify-content-center align-items-center text-center">
