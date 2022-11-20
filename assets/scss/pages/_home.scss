@@ -1,6 +1,6 @@
 .hero {
   @include media-breakpoint-up(sm) {
-    height: 350px;
+    height: 550px;
   }
 
   &__jumbotron {
@@ -11,7 +11,7 @@
     color: var(--tertiary-text);
     font-size: 1.5rem;
     line-height: 1.75;
-    max-width: 825px;
+    // max-width: 900px;
 
     &--name {
       color: var(--secondary-text);
