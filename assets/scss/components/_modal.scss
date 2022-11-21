@@ -1,0 +1,13 @@
+.modal {
+
+    &-header,
+    &-footer {
+        background-color: var(--primary-bg);
+        border-color: var(--secondary-bg) !important;
+    }
+
+    &-body {
+        background-color: var(--secondary-bg);
+    }
+
+}
