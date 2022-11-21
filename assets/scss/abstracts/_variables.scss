@@ -17,6 +17,8 @@ $light-theme-primary-border:#dee2e6;
 $light-theme-scroll-bar-color:#d6dee1;
 $light-theme-scroll-bar-hover-color:#a8bbbf;
 $light-theme-shot-hover-bg: rgba($light-theme-primary-color, 0.85);
+$light-theme-primary-btn-bg: $light-theme-primary-color;
+$light-theme-primary-btn-hover-bg: darken($light-theme-primary-color, 10%);
 
 $light-theme-colors:(
     "primary":         $light-theme-primary-color,
@@ -28,7 +30,9 @@ $light-theme-colors:(
     "primary-border":  $light-theme-primary-border,
     "scroll-bar-color":  $light-theme-scroll-bar-color,
     "scroll-bar-hover-color":  $light-theme-scroll-bar-hover-color,
-    "shot-hover-bg":   $light-theme-shot-hover-bg 
+    "shot-hover-bg":   $light-theme-shot-hover-bg,
+    "primary-btn-bg": $light-theme-primary-btn-bg,
+    "primary-btn-hover-bg": $light-theme-primary-btn-hover-bg
     );
 
 // Dark Theme Colors
@@ -42,6 +46,8 @@ $dark-theme-primary-border:#5f6368;
 $dark-theme-scroll-bar-color:#5f6368;
 $dark-theme-scroll-bar-hover-color:darken($dark-theme-scroll-bar-color,1);
 $dark-theme-shot-hover-bg: rgba($dark-theme-primary-color, 0.85);
+$dark-theme-primary-btn-bg: $dark-theme-primary-color;
+$dark-theme-primary-btn-hover-bg: darken($dark-theme-primary-color, 10%);
 
 $dark-theme-colors:(
     "primary":         $dark-theme-primary-color,
@@ -53,7 +59,9 @@ $dark-theme-colors:(
     "primary-border":  $dark-theme-primary-border,
     "scroll-bar-color":  $dark-theme-scroll-bar-color,
     "scroll-bar-hover-color":  $dark-theme-scroll-bar-hover-color,
-    "shot-hover-bg":   $dark-theme-shot-hover-bg 
+    "shot-hover-bg":   $dark-theme-shot-hover-bg,
+    "primary-btn-bg": $dark-theme-primary-btn-bg,
+    "primary-btn-hover-bg": $dark-theme-primary-btn-hover-bg 
 );
 
 

@@ -1,0 +1,14 @@
+.btn {
+    &-primary {
+        background-color: var(--primary-btn-bg);
+        border-color: var(--primary-btn-bg);
+        color: $white;
+
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: var(--primary-btn-hover-bg) !important;
+            border-color: var(--primary-btn-hover-bg) !important;
+        }
+    }
+}
